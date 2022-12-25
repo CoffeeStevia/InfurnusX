@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="InfernusX logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ICSharpCode.AvalonEdit">
+      <HintPath>..\..\..\..\Downloads\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="Oxygen API">
+      <HintPath>..\..\..\..\Downloads\Oxygen_API.dll</HintPath>
+    </Reference>
+    <Reference Include="WeAreDevs_API">
+      <HintPath>..\..\WRD API thingy\WRD API thingy\bin\Debug\WeAreDevs_API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="InfernusX logo.png" />
+  </ItemGroup>
+
+</Project>

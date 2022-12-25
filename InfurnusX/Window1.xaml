@@ -1,0 +1,70 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfurnusX"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" x:Class="InfurnusX.Window1"
+        mc:Ignorable="d"
+        Icon="InfernusX logo.png"
+        Title="MainWindow" Height="450" Width="800" MinWidth="300" MinHeight="300" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen"  Background="{x:Null}" Foreground="{x:Null}">
+    <Grid MouseDown="Grid_MouseDown" Loaded="Grid_Loaded_1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="458*"/>
+            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="111*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="122*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="29.933"/>
+            <RowDefinition Height="110*"/>
+        </Grid.RowDefinitions>
+        <Border x:Name="MainBorder" BorderThickness="6,6,6,6" HorizontalAlignment="Left" Height="171" Width="259" Background="#FF0F0F0F" CornerRadius="7,7,7,7" RenderTransformOrigin="0.488,1.353" Margin="19,6,0,26" Grid.ColumnSpan="3" Grid.RowSpan="7" Grid.Column="2" Grid.Row="2">
+            <Border.Style>
+                <Style/>
+            </Border.Style>
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="5"/>
+            </Border.Effect>
+            <Image x:Name="Icon" Source="/InfernusX logo.png" Margin="2,6,-4,4"/>
+            
+        </Border>
+        <Border x:Name="Script_Hub" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="287" Margin="55,48,0,0" VerticalAlignment="Top" Width="578" Background="#FF161616" Visibility="Hidden" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="6" Grid.Row="3">
+            <Button x:Name="DarkHub" Content="DarkHub" Margin="9,9,414,226" Background="#FF0E0E0E" BorderBrush="#FF0E0E0E" Foreground="White" FontSize="16" Click="DarkHub_Click"/>
+        </Border>
+        <Border x:Name="SettingsTab" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="287" Margin="56,41,0,0" VerticalAlignment="Top" Width="578" Background="#FF161616" Visibility="Hidden"/>
+        <avalonedit:TextEditor x:Name="Textbox" Margin="55,55,0,24" ShowLineNumbers="True" Background="#FF0E0E0E" Foreground="White" LineNumbersForeground="White" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Visibility="Hidden" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="2" Grid.RowSpan="6" FontSize="13"/>
+        <Label x:Name="Label1" Content="InfernusX" HorizontalAlignment="Left" Height="27" Margin="279,16,0,0" FontFamily="Verdona" VerticalAlignment="Top" Width="78" FontSize="16" Visibility="Hidden" Grid.Column="2" Grid.Row="3">
+            <Label.Foreground>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                    <GradientStop Color="#FF640000"/>
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FFB10000" Offset="1"/>
+                    <GradientStop Color="#FFA90808" Offset="0"/>
+                </RadialGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button x:Name="Exit" Content="&#xE894;" Margin="135,11,0,76"  Foreground="White" RenderTransformOrigin="0.619,0.59" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" Click="Exit_Click" Visibility="Hidden" Grid.Column="3" Grid.Row="3"/>
+        <Button x:Name="Minimize" Content="&#xE8AF;" Margin="96,11,40,76" Foreground="White" RenderTransformOrigin="0.564,0.824" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Minimize_Click" Visibility="Hidden" Grid.Column="3" Grid.Row="3"/>
+        <Button x:Name="Execute" Content="&#xE768;" Margin="9,57,410,0" Foreground="White" RenderTransformOrigin="0.526,0.544" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Execute_Click" Visibility="Hidden" Grid.Row="3" Grid.Column="2" Height="33" VerticalAlignment="Top"/>
+        <Button x:Name="Inject" Content="&#xEF3C;" Margin="9,91,410,16" Foreground="White" RenderTransformOrigin="0.526,0.544" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Inject_Click" Visibility="Hidden" Grid.Row="3" Grid.Column="2" Grid.RowSpan="3"/>
+        <Button x:Name="Clear" Content="&#xE75C;" Margin="10,0,409,66" Foreground="White" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Clear_Click" Visibility="Hidden" Grid.Row="5" Grid.Column="2" Grid.RowSpan="2"/>
+        <Button x:Name="Save" Content="&#xE74E;" Margin="9,15,410,33" Foreground="White" RenderTransformOrigin="0.513,0.559" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Save_Click" Visibility="Hidden" Grid.Row="6" Grid.Column="2"/>
+        <Button x:Name="Open" Content="&#xED25;" Margin="9,48,410,0" Foreground="White" RenderTransformOrigin="0.513,0.559" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Open_Click" Visibility="Hidden" Grid.Row="6" Grid.Column="2"/>
+        <Button x:Name="Settings" Content="&#xE90F;" Margin="9,81,410,107" Foreground="White" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Settings_Click" Visibility="Hidden" OpacityMask="#FF161616" Grid.Row="6" Grid.Column="2" Grid.RowSpan="3"/>
+        <Button x:Name="Back" Content="&#59179;" Margin="9,33,410,43" Foreground="White" RenderTransformOrigin="0.513,0.559" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="Back_Click" Visibility="Hidden" OpacityMask="#FF161616" Grid.Row="8" Grid.Column="2"/>
+        <Button x:Name="UnlockFPS" Content="Unlock FPS" Margin="76,64,260,25" Foreground="White" RenderTransformOrigin="0.513,0.559" FontFamily="Microsoft YaHei UI" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="UnlockFPS_Click" Visibility="Hidden" OpacityMask="#FF161616" Grid.Row="3" Grid.Column="2"/>
+        <Button x:Name="InternalUI" Content="Internal UI" Margin="76,105,260,2" Foreground="White" RenderTransformOrigin="0.513,0.559" FontFamily="Microsoft YaHei UI" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="InternalUI_Click" Visibility="Hidden" OpacityMask="#FF161616" Grid.Row="3" Grid.Column="2" Grid.RowSpan="3"/>
+        <Button x:Name="ScriptHub" Content="&#xE909;" Margin="9,30,410,77" Foreground="White" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe MDL2 Assets" Background="#0E0E0E" BorderBrush="#FF0E0E0E" FontSize="16" Click="ScriptHub_Click" Visibility="Hidden" OpacityMask="#FF161616" Grid.Row="7" Grid.Column="2" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
